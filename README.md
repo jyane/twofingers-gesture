@@ -15,7 +15,7 @@ Even libinput doesn't support 2 fingers swipe, `libinput debug-events` exposes 2
  event6   POINTER_SCROLL_FINGER   +2.901s       vert 0.00/0.0 horiz -5.27/0.0* (finger)
 ```
 
-twofingers-gesture parses the lines and checks vert / horiz values and if the action was like forward/backward swipe then maps to 'xdotool key ...` and executes it.
+twofingers-gesture parses the lines and checks vert / horiz values and if the action was like forward/backward swipe then maps to `xdotool key ...` and executes it.
 
 This logic eventualy converts swipe actions to keyboard inputs.
 
@@ -34,3 +34,14 @@ Exec=/PATH_TO/main.py
 Comment=
 Categories=System;
 ```
+
+## Troubleshooting
+`main.py` contains only ~40 lines with comments, you can easily understand that.
+1. Run xdotool and verify it works.
+2. Run libinput debug-events and verify it works.
+3. Make sure that you are in `input` group.
+
+The values in `main.py` are customized for my environment (debian rodete on X1 carbon), you can watch `libinput debug-events` logs and update `main.py`.
+
+## TODO
+Config, rewrite with golang
