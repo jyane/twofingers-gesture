@@ -41,7 +41,7 @@ Categories=System;
 2. Run libinput debug-events and verify it works.
 3. Make sure that you are in `input` group.
 
-The values in `main.py` are customized for my environment (debian rodete on X1 carbon), you can watch `libinput debug-events` logs and update `main.py`.
+The values in `main.py` are customized for my environment (debian testing on X1 carbon), you can watch `libinput debug-events` logs and update `main.py`.
 
 ## TODO
 Config, rewrite with golang
